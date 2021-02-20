@@ -23,6 +23,17 @@ const App = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
+  // const [pokemons, setPokemons] = useState([]);
+
+  // useEffect(() => {
+  //   fetch('https://pokeapi.co/api/v2/type/5')
+  //     .then(result => result.json())
+  //     .then(resultJson => {
+  //       console.log(resultJson);
+  //       setPokemons(resultJson.pokemon);
+  //     });
+  // }, []);
+
   useEffect(() => {
     console.log('Componente App montado!');
   }, []);
@@ -67,6 +78,14 @@ const App = () => {
         <input type='text' value={description} onChange={(event) => setDescription(event.target.value)} />
         <button type='submit' onClick={(event) => handleSubmit(event)}>Criar novo usuário</button>
       </form>
+
+      {/* {
+        pokemons.map((item, index) => {
+          return (
+            <p key={index}>{item.pokemon.name}</p>
+          )
+        })
+      } */}
     </div>
   );
 }
